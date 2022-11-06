@@ -8,30 +8,6 @@ enum class CardType {
     Visa, Mastercard, Maestro, MIR, VkPay
 }
 
-fun main() {
-    val type0: CardType = CardType.Visa
-    val currentTransaction0 = 100_00
-    println(countFee(type0, currentTransaction = currentTransaction0) / 100)
-
-    val type1: CardType = CardType.Visa
-    val currentTransaction1 = 10000_00
-    println(countFee(type1, currentTransaction = currentTransaction1) / 100)
-
-    val type2: CardType = CardType.Maestro
-    val currentTransaction2 = 10000_00
-    val amountOfPreviousTransactions2 = 80000_00
-    println(countFee(type2, amountOfPreviousTransactions2, currentTransaction2) / 100)
-
-    val type3: CardType = CardType.Mastercard
-    val currentTransaction3 = 10000_00
-    val amountOfPreviousTransactions3 = 50000_00
-    println(countFee(type3, amountOfPreviousTransactions3, currentTransaction3) / 100)
-
-    val type4: CardType = CardType.MIR
-    val currentTransaction4 = 10000_00
-    print(countFee(type4, currentTransaction = currentTransaction4) / 100)
-}
-
 /**
  * Параметры:
  * тип карты/счёта (по умолчанию VK Pay);
