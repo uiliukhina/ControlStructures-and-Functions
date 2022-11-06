@@ -9,7 +9,7 @@ class FeeCounterKtTest {
     fun countFeeDefault() {
         val currentTransaction = 100_00
         val result = countFee(currentTransaction = currentTransaction) / 100
-        assertEquals(0, result)
+        assertEquals(10, result)
     }
 
     @Test
