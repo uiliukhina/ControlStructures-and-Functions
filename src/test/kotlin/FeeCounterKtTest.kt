@@ -5,16 +5,6 @@ import org.junit.Assert.*
 import CardType.*
 
 class FeeCounterKtTest {
-    /**
-     * Параметры:
-     * тип карты/счёта (по умолчанию VK Pay);
-     * сумму предыдущих переводов в этом месяце (по умолчанию 0 рублей);
-     * сумму совершаемого перевода.
-     * Условия:
-     * Mastercard, Maestro - до 75 000руб не взимается, иначе 0.6% + 20 руб
-     * Visa, Мир - 0.75%, минимум 35
-     * VkPay - не взимается
-     */
     @Test
     fun countFeeDefault() {
         val currentTransaction = 100_00
