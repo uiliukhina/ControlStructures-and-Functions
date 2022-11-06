@@ -1,4 +1,5 @@
 plugins {
+    id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.7.20'
 }
 
@@ -10,7 +11,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib'
+    testImplementation 'junit:junit:4.13.2'
 }
 
 test {
